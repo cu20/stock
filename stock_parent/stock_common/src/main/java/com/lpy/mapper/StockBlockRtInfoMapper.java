@@ -1,6 +1,11 @@
 package com.lpy.mapper;
 
+import com.lpy.pojo.domain.StockBlockDomain;
 import com.lpy.pojo.entity.StockBlockRtInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 /**
 * @author gugu
@@ -22,4 +27,5 @@ public interface StockBlockRtInfoMapper {
 
     int updateByPrimaryKey(StockBlockRtInfo record);
 
+    List<StockBlockDomain> sectorAll(@Param("timePoint") Date timePoint);
 }

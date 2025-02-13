@@ -1,6 +1,12 @@
 package com.lpy.mapper;
 
+import com.lpy.pojo.domain.StockUpdownDomain;
 import com.lpy.pojo.entity.StockRtInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
 * @author gugu
@@ -22,4 +28,9 @@ public interface StockRtInfoMapper {
 
     int updateByPrimaryKey(StockRtInfo record);
 
+    List<StockUpdownDomain> getNewestStockInfo(@Param("timePoint") Date curDate);
+
+    List<StockUpdownDomain> getNewestStockInfoLimit(@Param("timePoint") Date curDate);
+
+    List<Map> getStockUpdownCount(@Param("openTime") Date openTime,@Param("curTime") Date curTime,@Param("flag") int i);
 }

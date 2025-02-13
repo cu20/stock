@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "stock",
+      "type": "com.lpy.pojo.vo.StockInfoConfig",
+      "sourceType": "com.lpy.pojo.vo.StockInfoConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "stock.inner",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.lpy.pojo.vo.StockInfoConfig"
+    },
+    {
+      "name": "stock.outer",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.lpy.pojo.vo.StockInfoConfig"
+    }
+  ],
+  "hints": []
+}
